@@ -10,26 +10,7 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween, // Space between rows
         children: [
           // Left row (Peer Logos_new)
-          Padding(
-            padding: const EdgeInsets.all(6.0),
-            child: Container(
-              width: 32, // Width from CSS
-              height: 92, // Height from CSS
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/PeerSignet_SW_RGB.png'), // Use the correct asset path
-                  fit: BoxFit.contain,
-                ),
-                boxShadow: [
-                  BoxShadow(
-                    offset: Offset(-15, 19), // Drop shadow from CSS
-                    blurRadius: 77.3,
-                    color: Color.fromRGBO(247, 147, 26, 0.4), // Shadow color from CSS
-                  ),
-                ],
-              ),
-            ),
-          ),
+      
 
           // Middle row (Dashboard)
           Column(
@@ -59,6 +40,35 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget {
               ),
             ],
           ),
+
+          Container(
+             width: 323,
+                  height: 54,
+                  decoration: BoxDecoration(
+                    color: Colors.grey[300], // Search bar background color
+                    borderRadius: BorderRadius.circular(50),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.25),
+                        blurRadius: 4,
+                        offset: Offset(0, 4),
+                      ),
+                    ],
+                  ),
+            child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                          child: Icon(Icons.search, color: Colors.black, size: 30),
+                        ),
+          ),
+                      Text(
+                        'Search for anything',
+                        style: TextStyle(
+                          fontFamily: 'Poppins',
+                          fontSize: 32,
+                          fontWeight: FontWeight.w300,
+                          color: Color(0xFF787878), // Light grey text color
+                        ),
+                      ),
 
           // Right row (Trending, Subscriptions, Friends)
           Padding(

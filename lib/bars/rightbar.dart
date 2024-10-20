@@ -4,7 +4,7 @@ class SidebarRight extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width * (703 / 3840), // Proportional width from CSS
+      width: MediaQuery.of(context).size.width * (703 / 2160), // Proportional width from CSS
       height: MediaQuery.of(context).size.height, // Full screen height
       color: const Color(0xFF252525), // Background color from CSS
       padding: const EdgeInsets.all(16.0),

@@ -41,57 +41,12 @@ class MainBar extends StatelessWidget {
                   ),
                 ),
                 
-                // Search Bar
-                Container(
-                  width: 323,
-                  height: 54,
-                  decoration: BoxDecoration(
-                    color: Colors.grey[300], // Search bar background color
-                    borderRadius: BorderRadius.circular(50),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withOpacity(0.25),
-                        blurRadius: 4,
-                        offset: Offset(0, 4),
-                      ),
-                    ],
-                  ),
-                  child: Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                        child: Icon(Icons.search, color: Colors.black, size: 30),
-                      ),
-                      Text(
-                        'Search for anything',
-                        style: TextStyle(
-                          fontFamily: 'Poppins',
-                          fontSize: 32,
-                          fontWeight: FontWeight.w300,
-                          color: Color(0xFF787878), // Light grey text color
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+               
               ],
             ),
           ),
 
-          const SizedBox(height: 30),
-
-          // Trending, Subscriptions, Friends Row
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              _buildCategoryText('Trending', Color(0xFF77AFFF), underline: true),
-              const SizedBox(width: 40),
-              _buildCategoryText('Subscriptions', Colors.white),
-              const SizedBox(width: 40),
-              _buildCategoryText('Friends', Colors.white),
-            ],
-          ),
-
+         
           const SizedBox(height: 30),
 
           // Content Section: Image and Text Blocks
